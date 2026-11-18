@@ -108,6 +108,14 @@
       "author": {
         "name": "陈石 律师"
       }
+    },
+    {
+      "name": "legal-capabilities",
+      "source": "./capabilities",
+      "description": "跨领域法律能力：法院短信识别与文书归档、文档 OCR、微信公众号文章抓取、元典法条与案例检索。",
+      "author": {
+        "name": "LawyerCH"
+      }
     }
   ]
 }

@@ -1,0 +1,27 @@
+# NOTICE
+
+本仓库包含第三方内容，来源与许可如下。
+
+## 1. 主体框架
+
+- Anthropic `claude-for-legal` — Apache License 2.0
+- 陈石律师 `claude-for-legal-ZH` — Apache License 2.0
+  https://github.com/CSlawyer1985/claude-for-legal-ZH
+
+本仓库在此基础上进行整合与修改，不代表原作者背书。
+
+## 2. capabilities/ 并入的技能
+
+以下技能来自 `cat-xierluo/legal-skills` 等项目，均为 MIT License，
+各目录内保留原始 `LICENSE.txt`：
+
+| 技能 | 版权 | 许可证 |
+|---|---|---|
+| court-sms | © 2026 杨卫薪律师 | MIT |
+| mineru-ocr | © 2025 MinerU Skill Contributors | MIT |
+| wechat-article-fetch | © 2025 杨卫薪律师 | MIT |
+| yuandian-law-search | © 2026 maoking | MIT |
+
+## 3. 未使用的内容
+
+本仓库不包含 CC BY-NC-SA 4.0 或其他禁止商业使用的第三方内容。

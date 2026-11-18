@@ -201,6 +201,25 @@ scripts/install-workbuddy.sh    # 默认符号链接安装到 ~/.workbuddy/skill
 
 ---
 
+## 能力层（capabilities）
+
+除 13 个业务领域插件外，本仓库提供 `capabilities/`，放 4 个跨领域技能：
+
+| 技能 | 作用 |
+|---|---|
+| `court-sms` | 识别法院短信，提取案号与节点，下载文书并归档 |
+| `mineru-ocr` | 文档、扫描件、图片、网页转 Markdown |
+| `wechat-article-fetch` | 抓取微信公众号文章，保存为 Markdown |
+| `yuandian-law-search` | 元典法条与案例检索 |
+
+```bash
+/plugin install legal-capabilities@claude-for-legal-zh
+```
+
+也可以把 `capabilities/skills/` 下的目录复制到项目的 `.claude/skills/` 使用。配置与许可见 [`capabilities/README.md`](capabilities/README.md) 和 [`NOTICE`](NOTICE)。
+
+---
+
 ## 盒子里有什么
 
 - **13 个业务领域插件**——覆盖律所、法务和学术法律工作，每个插件围绕冷启动面试构建，生成实践画像（`CLAUDE.md`），所有技能从中读取配置。
@@ -338,6 +357,7 @@ criminal-legal/           # 刑事辩护与合规——阅卷梳理、取保候�
 legal-clinic/             # 法律诊所——诊所设置、学生导入、接待、节点、备忘录、移交
 law-student/              # 法学教育——课堂训练、知识体系、IRAC、法考备考、记忆卡片
 legal-builder-hub/        # 社区技能发现与安装，含信任门槛
+capabilities/             # 跨领域能力——法院短信、OCR、文章抓取、法规检索
 references/               # 共享参考文件——知识库协议、Agentic Search 路由、尽调/庭审/合同审核/咨询/报价工作流
 external_plugins/         # 合作方构建的插件（由供应商维护）
 managed-agent-cookbooks/  # Claude Managed Agent 蓝图——每个定时 Agent 一个目录
@@ -700,7 +720,7 @@ scripts/                  # deploy-managed-agent.sh · validate.py · orchestrat
 
 ## 许可证
 
-依据 [Apache License, Version 2.0](LICENSE) 许可。
+依据 [Apache License, Version 2.0](LICENSE) 许可。`capabilities/` 下的部分技能为 MIT License，具体归属见 [NOTICE](NOTICE)。
 
 <p align="center">
   <img src="docs/assets/about.png" alt="关于作者 — 着陆页 About 区域" width="800">
