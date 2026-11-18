@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate Codex skill adapters for claude-for-legal-ZH.
+"""Generate Codex skill adapters for skills-for-legal.
 
 The upstream repository is a Claude Code plugin marketplace. Codex consumes
 skills through `.agents/skills` or `~/.codex/skills`. This script creates a
@@ -136,7 +136,7 @@ def adapter_body(domain: str, meta: dict, skills: list[str], description: str) -
     commands = ", ".join(f"`{name}`" for name in skills)
     # JSON-quoted scalar = valid YAML flow scalar; descriptions contain ": "
     # which breaks unquoted YAML plain scalars in strict frontmatter parsers.
-    desc = f'Use when the user needs Chinese legal work in the {meta["display"]} domain: {meta["triggers"]}. This is a Codex adapter for claude-for-legal-ZH/{domain}; it routes natural-language requests to the original domain CLAUDE.md and skills/*/SKILL.md workflows.'
+    desc = f'Use when the user needs Chinese legal work in the {meta["display"]} domain: {meta["triggers"]}. This is a Codex adapter for skills-for-legal/{domain}; it routes natural-language requests to the original domain CLAUDE.md and skills/*/SKILL.md workflows.'
     return f"""---
 name: {meta["codex_name"]}
 description: {json.dumps(desc, ensure_ascii=False)}
@@ -144,7 +144,7 @@ description: {json.dumps(desc, ensure_ascii=False)}
 
 # {meta["display"]} Codex Adapter
 
-This skill lets Codex use the original `claude-for-legal-ZH/{domain}` content without requiring Claude Code slash commands.
+This skill lets Codex use the original `skills-for-legal/{domain}` content without requiring Claude Code slash commands.
 
 ## Source Files
 
@@ -186,7 +186,7 @@ When an original instruction says to run `/{domain}:some-command`, interpret tha
 
 def cookbook_body(cookbook: str, meta: dict) -> str:
     root = f"managed-agent-cookbooks/{cookbook}"
-    desc = f'Use when the user needs a Chinese legal managed workflow for {meta["display"]}: {meta["triggers"]}. This is a Codex adapter for claude-for-legal-ZH/managed-agent-cookbooks/{cookbook}.'
+    desc = f'Use when the user needs a Chinese legal managed workflow for {meta["display"]}: {meta["triggers"]}. This is a Codex adapter for skills-for-legal/managed-agent-cookbooks/{cookbook}.'
     return f"""---
 name: {meta["codex_name"]}
 description: {json.dumps(desc, ensure_ascii=False)}

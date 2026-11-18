@@ -1,11 +1,11 @@
 ---
 name: chinese-legal-commercial
-description: "Use when the user needs Chinese legal work in the 商事合同 domain: 合同审查、NDA、供应商协议、SaaS/MSA、续约、合同利益方摘要、合同风险上报、商事法务. This is a DeepSeek Harness (dsh) adapter for claude-for-legal-ZH/commercial-legal; it routes natural-language requests to the original domain CLAUDE.md and skills/*/SKILL.md workflows."
+description: "Use when the user needs Chinese legal work in the 商事合同 domain: 合同审查、NDA、供应商协议、SaaS/MSA、续约、合同利益方摘要、合同风险上报、商事法务. This is a DeepSeek Harness (dsh) adapter for skills-for-legal/commercial-legal; it routes natural-language requests to the original domain CLAUDE.md and skills/*/SKILL.md workflows."
 ---
 
 # 商事合同 DeepSeek Harness Adapter
 
-This skill lets DeepSeek Harness (`dsh`) use the original `claude-for-legal-ZH/commercial-legal` content without requiring Claude Code slash commands.
+This skill lets DeepSeek Harness (`dsh`) use the original `skills-for-legal/commercial-legal` content without requiring Claude Code slash commands.
 
 ## Source Files
 
@@ -16,7 +16,7 @@ This skill lets DeepSeek Harness (`dsh`) use the original `claude-for-legal-ZH/c
 
 ## Path Resolution
 
-The repository-relative paths above resolve against the `claude-for-legal-ZH` repository root:
+The repository-relative paths above resolve against the `skills-for-legal` repository root:
 
 - If the current workspace contains the repository, resolve them against the repository root directly.
 - Otherwise (user-level install), run `cat ~/.dsh/legal-zh/repo` once to get the absolute repository path recorded by `scripts/install-dsh.sh`, then prefix the relative paths with it.

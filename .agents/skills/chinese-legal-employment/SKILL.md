@@ -1,11 +1,11 @@
 ---
 name: chinese-legal-employment
-description: "Use when the user needs Chinese legal work in the 劳动用工 domain: 劳动合同解除、劳动关系认定、假期管理、员工调查、规章制度、工资工时、跨省用工、劳动法. This is a Codex adapter for claude-for-legal-ZH/employment-legal; it routes natural-language requests to the original domain CLAUDE.md and skills/*/SKILL.md workflows."
+description: "Use when the user needs Chinese legal work in the 劳动用工 domain: 劳动合同解除、劳动关系认定、假期管理、员工调查、规章制度、工资工时、跨省用工、劳动法. This is a Codex adapter for skills-for-legal/employment-legal; it routes natural-language requests to the original domain CLAUDE.md and skills/*/SKILL.md workflows."
 ---
 
 # 劳动用工 Codex Adapter
 
-This skill lets Codex use the original `claude-for-legal-ZH/employment-legal` content without requiring Claude Code slash commands.
+This skill lets Codex use the original `skills-for-legal/employment-legal` content without requiring Claude Code slash commands.
 
 ## Source Files
 

@@ -17,8 +17,8 @@ argument-hint: "[板块名称，或描述你想修改的内容]"
 ## 操作步骤
 
 1. **读取配置。** 读取
-   `~/.claude/plugins/config/claude-for-legal-zh/criminal-legal/CLAUDE.md`
-   （以及上一层的 `~/.claude/plugins/config/claude-for-legal-zh/company-profile.md`）。如配置不存在或仍含 `[PLACEHOLDER]`，提示：
+   `~/.claude/plugins/config/skills-for-legal/criminal-legal/CLAUDE.md`
+   （以及上一层的 `~/.claude/plugins/config/skills-for-legal/company-profile.md`）。如配置不存在或仍含 `[PLACEHOLDER]`，提示：
 
    > 你还没有运行过设置。请先运行 `/criminal-legal:cold-start-interview`——customize 用于调整已有画像。
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install claude-for-legal-ZH WorkBuddy adapters.
+# Install skills-for-legal WorkBuddy adapters.
 #
 #   scripts/install-workbuddy.sh          # symlink mode (default, auto-updates on git pull)
 #   scripts/install-workbuddy.sh copy     # copy mode (standalone snapshot)

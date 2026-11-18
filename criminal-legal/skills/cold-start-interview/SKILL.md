@@ -10,12 +10,12 @@ argument-hint: "[--redo 对已配置插件重新运行] [--check-integrations �
 
 # /cold-start-interview
 
-运行冷启动面谈。首次运行写入 `~/.claude/plugins/config/claude-for-legal-zh/criminal-legal/CLAUDE.md`；
+运行冷启动面谈。首次运行写入 `~/.claude/plugins/config/skills-for-legal/criminal-legal/CLAUDE.md`；
 后续运行使用 `--redo` 重新面谈并在覆盖前显示差异。
 
 ## 使用说明
 
-1. **检查当前状态：** 读取 `~/.claude/plugins/config/claude-for-legal-zh/criminal-legal/CLAUDE.md`。如含 `[PLACEHOLDER]`，继续全新面谈。如已填充且未传 `--redo`，询问："看起来你已经设置好了。要重新运行面谈吗？这将覆盖配置（我先给你看差异）。"
+1. **检查当前状态：** 读取 `~/.claude/plugins/config/skills-for-legal/criminal-legal/CLAUDE.md`。如含 `[PLACEHOLDER]`，继续全新面谈。如已填充且未传 `--redo`，询问："看起来你已经设置好了。要重新运行面谈吗？这将覆盖配置（我先给你看差异）。"
 
 2. **按以下面谈脚本执行。**
 
@@ -23,9 +23,9 @@ argument-hint: "[--redo 对已配置插件重新运行] [--check-integrations �
 
 4. **阅读已分享的文件** 并提取实际立场——辩护策略偏好、文书风格、合规业务深度。标注陈述的立场与范本实际体现之间的差异。
 
-5. **迁移：** 如有已填充的 CLAUDE.md（无 `[PLACEHOLDER]` 标记）在 `~/.claude/plugins/cache/claude-for-legal-zh/criminal-legal/*/CLAUDE.md` 但不在配置路径，将其复制至配置路径并展示迁移内容。
+5. **迁移：** 如有已填充的 CLAUDE.md（无 `[PLACEHOLDER]` 标记）在 `~/.claude/plugins/cache/skills-for-legal/criminal-legal/*/CLAUDE.md` 但不在配置路径，将其复制至配置路径并展示迁移内容。
 
-6. **写入 `~/.claude/plugins/config/claude-for-legal-zh/criminal-legal/CLAUDE.md`**（按需创建父目录），按模板结构撰写。尽可能使用律师自己的措辞。
+6. **写入 `~/.claude/plugins/config/skills-for-legal/criminal-legal/CLAUDE.md`**（按需创建父目录），按模板结构撰写。尽可能使用律师自己的措辞。
 
 7. **展示摘要 + 建议下一步：**
    - "以下是我听到的——配置已写就。我说错了什么？"
@@ -57,7 +57,7 @@ argument-hint: "[--redo 对已配置插件重新运行] [--check-integrations �
 
 ## 检查共享的公司画像
 
-查找 `~/.claude/plugins/config/claude-for-legal-zh/company-profile.md`。
+查找 `~/.claude/plugins/config/skills-for-legal/company-profile.md`。
 
 - **如存在：** 读取。显示一行确认，跳过公司问题——直接进入插件特定问题。
 - **如不存在：** 你将是用户设置的第一个插件。提出公司问题（执业类型、律所名称、核心业务、管辖、规模）并写入共享画像，告知用户其他法律插件将读取它并跳过这些问题。

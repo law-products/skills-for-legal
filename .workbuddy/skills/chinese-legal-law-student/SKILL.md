@@ -1,11 +1,11 @@
 ---
 name: chinese-legal-law-student
-description: "法学学习与法考领域法律工作：法考、案例摘要、IRAC、课堂提问、法学写作、记忆卡片、学习计划、主观题和客观题训练。claude-for-legal-ZH/law-student 的 WorkBuddy 路由技能，把自然语言请求路由到原领域 CLAUDE.md 与 skills/*/SKILL.md 工作流。"
+description: "法学学习与法考领域法律工作：法考、案例摘要、IRAC、课堂提问、法学写作、记忆卡片、学习计划、主观题和客观题训练。skills-for-legal/law-student 的 WorkBuddy 路由技能，把自然语言请求路由到原领域 CLAUDE.md 与 skills/*/SKILL.md 工作流。"
 ---
 
-# 法学学习与法考 — claude-for-legal-ZH（WorkBuddy 适配）
+# 法学学习与法考 — skills-for-legal（WorkBuddy 适配）
 
-本技能让 WorkBuddy 复用 `claude-for-legal-ZH/law-student` 的原始内容，无需 Claude Code slash command。
+本技能让 WorkBuddy 复用 `skills-for-legal/law-student` 的原始内容，无需 Claude Code slash command。
 
 ## 源文件
 
@@ -16,7 +16,7 @@ description: "法学学习与法考领域法律工作：法考、案例摘要、
 
 ## 路径解析
 
-上述仓库相对路径以 `claude-for-legal-ZH` 仓库根目录为基准：
+上述仓库相对路径以 `skills-for-legal` 仓库根目录为基准：
 
 - 当前工作区包含本仓库时，直接按仓库根目录解析。
 - 用户级安装后，先运行 `cat ~/.workbuddy/legal-zh/repo` 取得安装脚本登记的仓库绝对路径，再拼接相对路径。

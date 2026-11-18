@@ -1,11 +1,11 @@
 ---
 name: chinese-legal-commercial
-description: "Use when the user needs Chinese legal work in the 商事合同 domain: 合同审查、NDA、供应商协议、SaaS/MSA、续约、合同利益方摘要、合同风险上报、商事法务. This is a Codex adapter for claude-for-legal-ZH/commercial-legal; it routes natural-language requests to the original domain CLAUDE.md and skills/*/SKILL.md workflows."
+description: "Use when the user needs Chinese legal work in the 商事合同 domain: 合同审查、NDA、供应商协议、SaaS/MSA、续约、合同利益方摘要、合同风险上报、商事法务. This is a Codex adapter for skills-for-legal/commercial-legal; it routes natural-language requests to the original domain CLAUDE.md and skills/*/SKILL.md workflows."
 ---
 
 # 商事合同 Codex Adapter
 
-This skill lets Codex use the original `claude-for-legal-ZH/commercial-legal` content without requiring Claude Code slash commands.
+This skill lets Codex use the original `skills-for-legal/commercial-legal` content without requiring Claude Code slash commands.
 
 ## Source Files
 

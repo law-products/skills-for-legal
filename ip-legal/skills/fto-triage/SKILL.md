@@ -17,7 +17,7 @@ argument-hint: "[描述产品 / 工艺 / 功能及法域 — 或仅描述对象�
 
 ## 指令
 
-1. 读取 `~/.claude/plugins/config/claude-for-legal-zh/ip-legal/CLAUDE.md`。如包含 `[占位符]`，停止并引导至 `/ip-legal:cold-start-interview`。
+1. 读取 `~/.claude/plugins/config/skills-for-legal/ip-legal/CLAUDE.md`。如包含 `[占位符]`，停止并引导至 `/ip-legal:cold-start-interview`。
 2. 遵循以下工作流。
 3. 运行录入（产品/工艺、技术细节、法域、已知专利、时间）。
 4. 如有专利检索连接器可用，运行初步专利检索。否则在输出中说明，并以用户提供的专利继续。

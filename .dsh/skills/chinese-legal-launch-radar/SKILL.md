@@ -1,6 +1,6 @@
 ---
 name: chinese-legal-launch-radar
-description: "Use when the user needs a Chinese legal managed workflow for 产品上线雷达工作流: 产品上线列表、功能风险分类、上线法律风险雷达、产品发布合规摘要. This is a DeepSeek Harness (dsh) adapter for claude-for-legal-ZH/managed-agent-cookbooks/launch-radar."
+description: "Use when the user needs a Chinese legal managed workflow for 产品上线雷达工作流: 产品上线列表、功能风险分类、上线法律风险雷达、产品发布合规摘要. This is a DeepSeek Harness (dsh) adapter for skills-for-legal/managed-agent-cookbooks/launch-radar."
 ---
 
 # 产品上线雷达工作流 DeepSeek Harness Adapter
@@ -17,7 +17,7 @@ This skill ports the original managed-agent cookbook into a DeepSeek Harness (`d
 
 ## Path Resolution
 
-The repository-relative paths above resolve against the `claude-for-legal-ZH` repository root:
+The repository-relative paths above resolve against the `skills-for-legal` repository root:
 
 - If the current workspace contains the repository, resolve them against the repository root directly.
 - Otherwise (user-level install), run `cat ~/.dsh/legal-zh/repo` once to get the absolute repository path recorded by `scripts/install-dsh.sh`, then prefix the relative paths with it.

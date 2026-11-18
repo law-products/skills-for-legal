@@ -1,11 +1,11 @@
 ---
 name: chinese-legal-ip
-description: "知识产权领域法律工作：商标可注册性、FTO、侵权警告函、通知删除、开源许可证、知识产权条款、专利、著作权、商标。claude-for-legal-ZH/ip-legal 的 WorkBuddy 路由技能，把自然语言请求路由到原领域 CLAUDE.md 与 skills/*/SKILL.md 工作流。"
+description: "知识产权领域法律工作：商标可注册性、FTO、侵权警告函、通知删除、开源许可证、知识产权条款、专利、著作权、商标。skills-for-legal/ip-legal 的 WorkBuddy 路由技能，把自然语言请求路由到原领域 CLAUDE.md 与 skills/*/SKILL.md 工作流。"
 ---
 
-# 知识产权 — claude-for-legal-ZH（WorkBuddy 适配）
+# 知识产权 — skills-for-legal（WorkBuddy 适配）
 
-本技能让 WorkBuddy 复用 `claude-for-legal-ZH/ip-legal` 的原始内容，无需 Claude Code slash command。
+本技能让 WorkBuddy 复用 `skills-for-legal/ip-legal` 的原始内容，无需 Claude Code slash command。
 
 ## 源文件
 
@@ -16,7 +16,7 @@ description: "知识产权领域法律工作：商标可注册性、FTO、侵权
 
 ## 路径解析
 
-上述仓库相对路径以 `claude-for-legal-ZH` 仓库根目录为基准：
+上述仓库相对路径以 `skills-for-legal` 仓库根目录为基准：
 
 - 当前工作区包含本仓库时，直接按仓库根目录解析。
 - 用户级安装后，先运行 `cat ~/.workbuddy/legal-zh/repo` 取得安装脚本登记的仓库绝对路径，再拼接相对路径。

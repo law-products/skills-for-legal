@@ -1,11 +1,11 @@
 ---
 name: chinese-legal-ai-governance
-description: "AI 治理领域法律工作：AI 应用登记、算法安全评估、科技伦理审查、生成式 AI 合规、AI 供应商审查、AI 治理。claude-for-legal-ZH/ai-governance-legal 的 WorkBuddy 路由技能，把自然语言请求路由到原领域 CLAUDE.md 与 skills/*/SKILL.md 工作流。"
+description: "AI 治理领域法律工作：AI 应用登记、算法安全评估、科技伦理审查、生成式 AI 合规、AI 供应商审查、AI 治理。skills-for-legal/ai-governance-legal 的 WorkBuddy 路由技能，把自然语言请求路由到原领域 CLAUDE.md 与 skills/*/SKILL.md 工作流。"
 ---
 
-# AI 治理 — claude-for-legal-ZH（WorkBuddy 适配）
+# AI 治理 — skills-for-legal（WorkBuddy 适配）
 
-本技能让 WorkBuddy 复用 `claude-for-legal-ZH/ai-governance-legal` 的原始内容，无需 Claude Code slash command。
+本技能让 WorkBuddy 复用 `skills-for-legal/ai-governance-legal` 的原始内容，无需 Claude Code slash command。
 
 ## 源文件
 
@@ -16,7 +16,7 @@ description: "AI 治理领域法律工作：AI 应用登记、算法安全评估
 
 ## 路径解析
 
-上述仓库相对路径以 `claude-for-legal-ZH` 仓库根目录为基准：
+上述仓库相对路径以 `skills-for-legal` 仓库根目录为基准：
 
 - 当前工作区包含本仓库时，直接按仓库根目录解析。
 - 用户级安装后，先运行 `cat ~/.workbuddy/legal-zh/repo` 取得安装脚本登记的仓库绝对路径，再拼接相对路径。

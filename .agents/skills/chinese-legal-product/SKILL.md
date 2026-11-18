@@ -1,11 +1,11 @@
 ---
 name: chinese-legal-product
-description: "Use when the user needs Chinese legal work in the 产品与营销合规 domain: 产品上线审查、营销文案审查、广告法、反不正当竞争、功能法律风险、业务法务快速咨询. This is a Codex adapter for claude-for-legal-ZH/product-legal; it routes natural-language requests to the original domain CLAUDE.md and skills/*/SKILL.md workflows."
+description: "Use when the user needs Chinese legal work in the 产品与营销合规 domain: 产品上线审查、营销文案审查、广告法、反不正当竞争、功能法律风险、业务法务快速咨询. This is a Codex adapter for skills-for-legal/product-legal; it routes natural-language requests to the original domain CLAUDE.md and skills/*/SKILL.md workflows."
 ---
 
 # 产品与营销合规 Codex Adapter
 
-This skill lets Codex use the original `claude-for-legal-ZH/product-legal` content without requiring Claude Code slash commands.
+This skill lets Codex use the original `skills-for-legal/product-legal` content without requiring Claude Code slash commands.
 
 ## Source Files
 

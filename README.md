@@ -1,4 +1,4 @@
-# Claude for Legal — 中国法版本
+# Skills for Legal — 中国法版
 
 <p align="center">
   <a href="https://github.com/CSlawyer1985/claude-for-legal-ZH/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License"></a>
@@ -21,7 +21,7 @@
 > **新用户？** 从 [QUICKSTART.md](QUICKSTART.md) 开始——60 秒完成安装。本文是完整参考手册。
 
 <p align="center">
-  <img src="docs/assets/hero.png" alt="Claude for Legal 中国法版本 — 着陆页 Hero" width="800">
+  <img src="docs/assets/hero.png" alt="Skills for Legal 中国法版 — 着陆页 Hero" width="800">
 </p>
 
 本仓库是一套**面向中国法律实务的通用插件集**——以 13 个业务领域的技能、领域规则与法律工作流为主体，内嵌参考材料与数据连接器，并可接入外部法律检索知识库（元典、chineselaw 等 MCP）。它不绑定单一 agent 环境：可安装为 [Claude Code](https://claude.com/product/claude-code) 插件，可通过一键脚本接入 [DeepSeek Harness（dsh）](https://github.com/deepseek-ai/deepseek-harness)、**Codex** 或 **WorkBuddy**（腾讯工作智能体），也可通过 [Claude Managed Agents API](https://docs.claude.com/en/api/managed-agents) 部署在你自己的工作流引擎后台。同一套 system prompt，同一套技能——你选择在哪里运行。
@@ -33,12 +33,12 @@
 /plugin marketplace add <path-to-this-repo>
 
 # 安装你需要的插件
-/plugin install commercial-legal@claude-for-legal-zh
-/plugin install privacy-legal@claude-for-legal-zh
-/plugin install corporate-legal@claude-for-legal-zh
+/plugin install commercial-legal@skills-for-legal
+/plugin install privacy-legal@skills-for-legal
+/plugin install corporate-legal@skills-for-legal
 
 # 重启 Claude Code，然后为每个已安装插件运行初始化设置。
-# 设置过程将你的实践画像写入 ~/.claude/plugins/config/claude-for-legal-zh/<插件名>/CLAUDE.md
+# 设置过程将你的实践画像写入 ~/.claude/plugins/config/skills-for-legal/<插件名>/CLAUDE.md
 /commercial-legal:cold-start-interview
 /privacy-legal:cold-start-interview
 /corporate-legal:cold-start-interview
@@ -213,7 +213,7 @@ scripts/install-workbuddy.sh    # 默认符号链接安装到 ~/.workbuddy/skill
 | `yuandian-law-search` | 元典法条与案例检索 |
 
 ```bash
-/plugin install legal-capabilities@claude-for-legal-zh
+/plugin install legal-capabilities@skills-for-legal
 ```
 
 也可以把 `capabilities/skills/` 下的目录复制到项目的 `.claude/skills/` 使用。配置与许可见 [`capabilities/README.md`](capabilities/README.md) 和 [`NOTICE`](NOTICE)。
@@ -390,7 +390,7 @@ scripts/                  # deploy-managed-agent.sh · validate.py · orchestrat
 | **插件** | 自包含的业务领域套件——技能、Agent、钩子和实践画像模板。按需安装。 | `<插件名>/` |
 | **技能** | 领域专业知识、惯例和分步方法论，Claude 在相关时自动调用——也可以通过斜杠命令显式触发：`/commercial-legal:review`、`/privacy-legal:dsar-response`、`/litigation-legal:claim-chart`。 | `<插件名>/skills/<技能名>/SKILL.md` |
 | **Agent** | 定时或事件驱动的工作流（续签监控、案件进度监控、法规变化监控）。在后台运行，推送到渠道或写入文件。 | `<插件名>/agents/` |
-| **实践画像** | 描述你的审查指引、升级规则和内部风格的纯文本 `CLAUDE.md`。所有技能从中读取。 | `~/.claude/plugins/config/claude-for-legal-zh/<插件名>/CLAUDE.md` |
+| **实践画像** | 描述你的审查指引、升级规则和内部风格的纯文本 `CLAUDE.md`。所有技能从中读取。 | `~/.claude/plugins/config/skills-for-legal/<插件名>/CLAUDE.md` |
 | **连接器** | 将 Claude 与你的数据系统连接的 [MCP 服务器](https://modelcontextprotocol.io/)——合同管理、文档管理、电子取证、检索平台、生产力工具。 | `.mcp.json`（每个插件） |
 | **托管 Agent 蓝图** | `agent.yaml` + 一级子 Agent + steering 示例，用于无头部署。 | `managed-agent-cookbooks/<slug>/` |
 
@@ -488,7 +488,7 @@ scripts/                  # deploy-managed-agent.sh · validate.py · orchestrat
 这些是参考模板。当它们与你团队的工作方式对齐时会发挥更大作用——定制机制就是插件本身。
 
 - **运行冷启动面试。** 它**就是**定制机制。它会询问你的实务方式、读取你的种子文件、写入你的实践画像。所有其他技能从中读取。一次 `/commercial-legal:cold-start-interview`，附上五份已签署的主合同、你的审查指引和升级矩阵，审查技能将显著更精准。
-- **编辑实践画像。** 你的画像位于 `~/.claude/plugins/config/claude-for-legal-zh/<插件名>/CLAUDE.md`。直接编辑以修正小问题——错误的升级阈值、新的集成、政策更新。它在插件更新后保留。
+- **编辑实践画像。** 你的画像位于 `~/.claude/plugins/config/skills-for-legal/<插件名>/CLAUDE.md`。直接编辑以修正小问题——错误的升级阈值、新的集成、政策更新。它在插件更新后保留。
 - **重新运行设置。** 当实务发生重大变化时（新业务领域、新系统、新政策），再次运行 `/<插件名>:cold-start-interview`。
 - **更换连接器。** 将 `.mcp.json` 指向你的合同管理系统、文档管理系统、电子取证平台、上线追踪器、HR 系统。连接器未配置时技能优雅降级——不会静默空转。
 - **带入你的审查指引和模板。** 将你的术语、内部风格和品牌模板放入插件的 `CLAUDE.md` 和 `references/`。技能会自动拾取。
@@ -793,9 +793,9 @@ scripts/                  # deploy-managed-agent.sh · validate.py · orchestrat
 ---
 
 <p align="center">
-  <img src="docs/assets/cta.png" alt="开始使用 Claude for Legal" width="800">
+  <img src="docs/assets/cta.png" alt="开始使用 Skills for Legal" width="800">
 </p>
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=CSlawyer1985/claude-for-legal-ZH&type=Date)](https://www.star-history.com/?repos=CSlawyer1985%2Fclaude-for-legal-ZH)
+[![Star History Chart](https://api.star-history.com/svg?repos=CSlawyer1985/claude-for-legal-ZH&type=Date)](https://www.star-history.com/?repos=CSlawyer1985%2Fskills-for-legal)

@@ -1,9 +1,9 @@
 ---
 name: chinese-legal-launch-radar
-description: "产品上线雷达工作流：产品上线列表、功能风险分类、上线法律风险雷达、产品发布合规摘要。claude-for-legal-ZH/managed-agent-cookbooks/launch-radar 的 WorkBuddy 路由技能。"
+description: "产品上线雷达工作流：产品上线列表、功能风险分类、上线法律风险雷达、产品发布合规摘要。skills-for-legal/managed-agent-cookbooks/launch-radar 的 WorkBuddy 路由技能。"
 ---
 
-# 产品上线雷达工作流 — claude-for-legal-ZH（WorkBuddy 适配）
+# 产品上线雷达工作流 — skills-for-legal（WorkBuddy 适配）
 
 本技能把原托管 Agent cookbook 转写为 WorkBuddy 工作流。
 
@@ -17,7 +17,7 @@ description: "产品上线雷达工作流：产品上线列表、功能风险分
 
 ## 路径解析
 
-上述仓库相对路径以 `claude-for-legal-ZH` 仓库根目录为基准：
+上述仓库相对路径以 `skills-for-legal` 仓库根目录为基准：
 
 - 当前工作区包含本仓库时，直接按仓库根目录解析。
 - 用户级安装后，先运行 `cat ~/.workbuddy/legal-zh/repo` 取得安装脚本登记的仓库绝对路径，再拼接相对路径。

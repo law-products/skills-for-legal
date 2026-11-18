@@ -1,11 +1,11 @@
 ---
 name: chinese-legal-litigation
-description: "Use when the user needs Chinese legal work in the 诉讼仲裁 domain: 案件登记、诉讼仲裁、律师函、要件分析、大事记、证据三性、庭前准备、保全、传票、法律文书. This is a Codex adapter for claude-for-legal-ZH/litigation-legal; it routes natural-language requests to the original domain CLAUDE.md and skills/*/SKILL.md workflows."
+description: "Use when the user needs Chinese legal work in the 诉讼仲裁 domain: 案件登记、诉讼仲裁、律师函、要件分析、大事记、证据三性、庭前准备、保全、传票、法律文书. This is a Codex adapter for skills-for-legal/litigation-legal; it routes natural-language requests to the original domain CLAUDE.md and skills/*/SKILL.md workflows."
 ---
 
 # 诉讼仲裁 Codex Adapter
 
-This skill lets Codex use the original `claude-for-legal-ZH/litigation-legal` content without requiring Claude Code slash commands.
+This skill lets Codex use the original `skills-for-legal/litigation-legal` content without requiring Claude Code slash commands.
 
 ## Source Files
 

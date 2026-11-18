@@ -1,11 +1,11 @@
 ---
 name: chinese-legal-ai-governance
-description: "Use when the user needs Chinese legal work in the AI 治理 domain: AI 应用登记、算法安全评估、科技伦理审查、生成式 AI 合规、AI 供应商审查、AI 治理. This is a DeepSeek Harness (dsh) adapter for claude-for-legal-ZH/ai-governance-legal; it routes natural-language requests to the original domain CLAUDE.md and skills/*/SKILL.md workflows."
+description: "Use when the user needs Chinese legal work in the AI 治理 domain: AI 应用登记、算法安全评估、科技伦理审查、生成式 AI 合规、AI 供应商审查、AI 治理. This is a DeepSeek Harness (dsh) adapter for skills-for-legal/ai-governance-legal; it routes natural-language requests to the original domain CLAUDE.md and skills/*/SKILL.md workflows."
 ---
 
 # AI 治理 DeepSeek Harness Adapter
 
-This skill lets DeepSeek Harness (`dsh`) use the original `claude-for-legal-ZH/ai-governance-legal` content without requiring Claude Code slash commands.
+This skill lets DeepSeek Harness (`dsh`) use the original `skills-for-legal/ai-governance-legal` content without requiring Claude Code slash commands.
 
 ## Source Files
 
@@ -16,7 +16,7 @@ This skill lets DeepSeek Harness (`dsh`) use the original `claude-for-legal-ZH/a
 
 ## Path Resolution
 
-The repository-relative paths above resolve against the `claude-for-legal-ZH` repository root:
+The repository-relative paths above resolve against the `skills-for-legal` repository root:
 
 - If the current workspace contains the repository, resolve them against the repository root directly.
 - Otherwise (user-level install), run `cat ~/.dsh/legal-zh/repo` once to get the absolute repository path recorded by `scripts/install-dsh.sh`, then prefix the relative paths with it.

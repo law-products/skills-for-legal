@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install claude-for-legal-ZH DeepSeek Harness (dsh) adapters.
+# Install skills-for-legal DeepSeek Harness (dsh) adapters.
 #
 #   scripts/install-dsh.sh          # symlink mode (default, auto-updates on git pull)
 #   scripts/install-dsh.sh copy     # copy mode (standalone snapshot)
@@ -77,7 +77,7 @@ fi
 cat >> "$AGENTS_FILE" <<'EOF'
 
 <!-- legal-zh:start -->
-## 中国法律工作守则（claude-for-legal-zh）
+## 中国法律工作守则（skills-for-legal）
 
 任务涉及中国法律实务时：
 

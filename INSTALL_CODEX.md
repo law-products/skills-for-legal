@@ -4,7 +4,7 @@
 
 ## 这是什么
 
-`claude-for-legal-ZH` 的原始形态是 **Claude Code 插件 marketplace**，不是 Claude 网页版或云端版插件。
+`skills-for-legal` 的原始形态是 **Claude Code 插件 marketplace**，不是 Claude 网页版或云端版插件。
 
 Codex 适配层不会重写法律工作流，而是复用原仓库中的：
 

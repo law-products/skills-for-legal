@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Release readiness checks for claude-for-legal-ZH.
+"""Release readiness checks for skills-for-legal.
 
 Checks the public package shape, not legal correctness. Portable: runs on
 Windows without bash and on Linux CI.

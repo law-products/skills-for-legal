@@ -1,6 +1,6 @@
 ---
 name: chinese-legal-reg-monitor
-description: "Use when the user needs a Chinese legal managed workflow for 监管动态监控工作流: 监管动态监控、法规 feed、监管摘要、重大性过滤、合规周报. This is a DeepSeek Harness (dsh) adapter for claude-for-legal-ZH/managed-agent-cookbooks/reg-monitor."
+description: "Use when the user needs a Chinese legal managed workflow for 监管动态监控工作流: 监管动态监控、法规 feed、监管摘要、重大性过滤、合规周报. This is a DeepSeek Harness (dsh) adapter for skills-for-legal/managed-agent-cookbooks/reg-monitor."
 ---
 
 # 监管动态监控工作流 DeepSeek Harness Adapter
@@ -17,7 +17,7 @@ This skill ports the original managed-agent cookbook into a DeepSeek Harness (`d
 
 ## Path Resolution
 
-The repository-relative paths above resolve against the `claude-for-legal-ZH` repository root:
+The repository-relative paths above resolve against the `skills-for-legal` repository root:
 
 - If the current workspace contains the repository, resolve them against the repository root directly.
 - Otherwise (user-level install), run `cat ~/.dsh/legal-zh/repo` once to get the absolute repository path recorded by `scripts/install-dsh.sh`, then prefix the relative paths with it.

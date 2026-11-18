@@ -1,9 +1,9 @@
 ---
 name: chinese-legal-docket-watcher
-description: "案件期限监控工作流：诉讼案件台账、期限监控、案件 docket、开庭和举证期限、诉讼日程提醒。claude-for-legal-ZH/managed-agent-cookbooks/docket-watcher 的 WorkBuddy 路由技能。"
+description: "案件期限监控工作流：诉讼案件台账、期限监控、案件 docket、开庭和举证期限、诉讼日程提醒。skills-for-legal/managed-agent-cookbooks/docket-watcher 的 WorkBuddy 路由技能。"
 ---
 
-# 案件期限监控工作流 — claude-for-legal-ZH（WorkBuddy 适配）
+# 案件期限监控工作流 — skills-for-legal（WorkBuddy 适配）
 
 本技能把原托管 Agent cookbook 转写为 WorkBuddy 工作流。
 
@@ -17,7 +17,7 @@ description: "案件期限监控工作流：诉讼案件台账、期限监控、
 
 ## 路径解析
 
-上述仓库相对路径以 `claude-for-legal-ZH` 仓库根目录为基准：
+上述仓库相对路径以 `skills-for-legal` 仓库根目录为基准：
 
 - 当前工作区包含本仓库时，直接按仓库根目录解析。
 - 用户级安装后，先运行 `cat ~/.workbuddy/legal-zh/repo` 取得安装脚本登记的仓库绝对路径，再拼接相对路径。

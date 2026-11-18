@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-MARKETPLACE_NAME="claude-for-legal-zh"
+MARKETPLACE_NAME="skills-for-legal"
 
 if ! command -v claude >/dev/null 2>&1; then
   echo "未找到 Claude Code CLI：claude" >&2

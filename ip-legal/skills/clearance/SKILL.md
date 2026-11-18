@@ -15,7 +15,7 @@ argument-hint: "[描述拟议商标、商品/服务及法域——或仅提供�
 
 ## 指令
 
-1. 读取 `~/.claude/plugins/config/claude-for-legal-zh/ip-legal/CLAUDE.md`。如包含
+1. 读取 `~/.claude/plugins/config/skills-for-legal/ip-legal/CLAUDE.md`。如包含
    `[占位符]`，停止并引导至 `/ip-legal:cold-start-interview`。
 2. 遵循以下工作流。
 3. 运行录入（商标、商品/服务、类别、法域、视觉/风格化）。
@@ -60,13 +60,13 @@ argument-hint: "[描述拟议商标、商品/服务及法域——或仅提供�
 
 ## 事项上下文
 
-**事项上下文。** 检查实践级 CLAUDE.md 中的 `## 事项工作区`。如果 `已启用` 为 `✗`（法务用户的默认值），跳过本段——技能使用实践级上下文，事项机制不可见。如果已启用且无活动事项，询问："这是哪个事项？运行 `/ip-legal:matter-workspace switch <代号>` 或说 `实践级`。"加载活动事项的 `matter.md` 获取事项特定上下文和覆盖项。将输出写入事项文件夹 `~/.claude/plugins/config/claude-for-legal-zh/ip-legal/matters/<代号>/`。除非 `跨事项上下文` 为 `开启`，否则绝不读取其他事项的文件。
+**事项上下文。** 检查实践级 CLAUDE.md 中的 `## 事项工作区`。如果 `已启用` 为 `✗`（法务用户的默认值），跳过本段——技能使用实践级上下文，事项机制不可见。如果已启用且无活动事项，询问："这是哪个事项？运行 `/ip-legal:matter-workspace switch <代号>` 或说 `实践级`。"加载活动事项的 `matter.md` 获取事项特定上下文和覆盖项。将输出写入事项文件夹 `~/.claude/plugins/config/skills-for-legal/ip-legal/matters/<代号>/`。除非 `跨事项上下文` 为 `开启`，否则绝不读取其他事项的文件。
 
 ---
 
 ## 先加载实践档案
 
-清除检索前，读取 `~/.claude/plugins/config/claude-for-legal-zh/ip-legal/CLAUDE.md`。提取：
+清除检索前，读取 `~/.claude/plugins/config/skills-for-legal/ip-legal/CLAUDE.md`。提取：
 
 - **角色**来自 `## 谁在使用`（律师 vs. 非律师改变工作成果抬头和下方的非律师关口）。
 - **注册地**和**执法地**来自 `## IP实践档案` 和 `## 执法姿态`（用户未指定时的默认法域）。

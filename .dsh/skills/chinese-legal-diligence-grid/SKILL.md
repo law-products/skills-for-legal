@@ -1,6 +1,6 @@
 ---
 name: chinese-legal-diligence-grid
-description: "Use when the user needs a Chinese legal managed workflow for 尽调问题表格工作流: 并购尽调材料读取、问题抽取、尽调表格、披露问题清单、法律尽调多文档归一化. This is a DeepSeek Harness (dsh) adapter for claude-for-legal-ZH/managed-agent-cookbooks/diligence-grid."
+description: "Use when the user needs a Chinese legal managed workflow for 尽调问题表格工作流: 并购尽调材料读取、问题抽取、尽调表格、披露问题清单、法律尽调多文档归一化. This is a DeepSeek Harness (dsh) adapter for skills-for-legal/managed-agent-cookbooks/diligence-grid."
 ---
 
 # 尽调问题表格工作流 DeepSeek Harness Adapter
@@ -17,7 +17,7 @@ This skill ports the original managed-agent cookbook into a DeepSeek Harness (`d
 
 ## Path Resolution
 
-The repository-relative paths above resolve against the `claude-for-legal-ZH` repository root:
+The repository-relative paths above resolve against the `skills-for-legal` repository root:
 
 - If the current workspace contains the repository, resolve them against the repository root directly.
 - Otherwise (user-level install), run `cat ~/.dsh/legal-zh/repo` once to get the absolute repository path recorded by `scripts/install-dsh.sh`, then prefix the relative paths with it.

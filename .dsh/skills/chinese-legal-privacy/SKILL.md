@@ -1,11 +1,11 @@
 ---
 name: chinese-legal-privacy
-description: "Use when the user needs Chinese legal work in the 数据合规与隐私 domain: 个人信息保护影响评估、PIPL、数据处理协议、DSAR、隐私政策、数据合规差距、数据出境和隐私合规. This is a DeepSeek Harness (dsh) adapter for claude-for-legal-ZH/privacy-legal; it routes natural-language requests to the original domain CLAUDE.md and skills/*/SKILL.md workflows."
+description: "Use when the user needs Chinese legal work in the 数据合规与隐私 domain: 个人信息保护影响评估、PIPL、数据处理协议、DSAR、隐私政策、数据合规差距、数据出境和隐私合规. This is a DeepSeek Harness (dsh) adapter for skills-for-legal/privacy-legal; it routes natural-language requests to the original domain CLAUDE.md and skills/*/SKILL.md workflows."
 ---
 
 # 数据合规与隐私 DeepSeek Harness Adapter
 
-This skill lets DeepSeek Harness (`dsh`) use the original `claude-for-legal-ZH/privacy-legal` content without requiring Claude Code slash commands.
+This skill lets DeepSeek Harness (`dsh`) use the original `skills-for-legal/privacy-legal` content without requiring Claude Code slash commands.
 
 ## Source Files
 
@@ -16,7 +16,7 @@ This skill lets DeepSeek Harness (`dsh`) use the original `claude-for-legal-ZH/p
 
 ## Path Resolution
 
-The repository-relative paths above resolve against the `claude-for-legal-ZH` repository root:
+The repository-relative paths above resolve against the `skills-for-legal` repository root:
 
 - If the current workspace contains the repository, resolve them against the repository root directly.
 - Otherwise (user-level install), run `cat ~/.dsh/legal-zh/repo` once to get the absolute repository path recorded by `scripts/install-dsh.sh`, then prefix the relative paths with it.

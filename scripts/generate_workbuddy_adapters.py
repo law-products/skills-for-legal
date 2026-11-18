@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate WorkBuddy skill adapters for claude-for-legal-ZH.
+"""Generate WorkBuddy skill adapters for skills-for-legal.
 
 The upstream repository is a Claude Code plugin marketplace. WorkBuddy (Tencent)
 discovers skills from `<project>/.workbuddy/skills` and `~/.workbuddy/skills`,
@@ -34,7 +34,7 @@ SKILLS_ROOT = ROOT / ".workbuddy" / "skills"
 
 PATH_RESOLUTION = """## 路径解析
 
-上述仓库相对路径以 `claude-for-legal-ZH` 仓库根目录为基准：
+上述仓库相对路径以 `skills-for-legal` 仓库根目录为基准：
 
 - 当前工作区包含本仓库时，直接按仓库根目录解析。
 - 用户级安装后，先运行 `cat ~/.workbuddy/legal-zh/repo` 取得安装脚本登记的仓库绝对路径，再拼接相对路径。
@@ -48,15 +48,15 @@ def yaml_string(text: str) -> str:
 
 def adapter_body(domain: str, meta: dict, skills: list[str], description: str) -> str:
     commands = "、".join(f"`{name}`" for name in skills)
-    desc = f'{meta["display"]}领域法律工作：{meta["triggers"]}。claude-for-legal-ZH/{domain} 的 WorkBuddy 路由技能，把自然语言请求路由到原领域 CLAUDE.md 与 skills/*/SKILL.md 工作流。'
+    desc = f'{meta["display"]}领域法律工作：{meta["triggers"]}。skills-for-legal/{domain} 的 WorkBuddy 路由技能，把自然语言请求路由到原领域 CLAUDE.md 与 skills/*/SKILL.md 工作流。'
     return f"""---
 name: {meta["codex_name"]}
 description: {yaml_string(desc)}
 ---
 
-# {meta["display"]} — claude-for-legal-ZH（WorkBuddy 适配）
+# {meta["display"]} — skills-for-legal（WorkBuddy 适配）
 
-本技能让 WorkBuddy 复用 `claude-for-legal-ZH/{domain}` 的原始内容，无需 Claude Code slash command。
+本技能让 WorkBuddy 复用 `skills-for-legal/{domain}` 的原始内容，无需 Claude Code slash command。
 
 ## 源文件
 
@@ -103,13 +103,13 @@ WorkBuddy 的 MCP 配置位于 `~/.workbuddy/mcp.json`（标准 `mcpServers` 格
 
 def cookbook_body(cookbook: str, meta: dict) -> str:
     root = f"managed-agent-cookbooks/{cookbook}"
-    desc = f'{meta["display"]}：{meta["triggers"]}。claude-for-legal-ZH/managed-agent-cookbooks/{cookbook} 的 WorkBuddy 路由技能。'
+    desc = f'{meta["display"]}：{meta["triggers"]}。skills-for-legal/managed-agent-cookbooks/{cookbook} 的 WorkBuddy 路由技能。'
     return f"""---
 name: {meta["codex_name"]}
 description: {yaml_string(desc)}
 ---
 
-# {meta["display"]} — claude-for-legal-ZH（WorkBuddy 适配）
+# {meta["display"]} — skills-for-legal（WorkBuddy 适配）
 
 本技能把原托管 Agent cookbook 转写为 WorkBuddy 工作流。
 

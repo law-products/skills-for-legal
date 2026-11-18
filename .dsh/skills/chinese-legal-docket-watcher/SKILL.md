@@ -1,6 +1,6 @@
 ---
 name: chinese-legal-docket-watcher
-description: "Use when the user needs a Chinese legal managed workflow for 案件期限监控工作流: 诉讼案件台账、期限监控、案件 docket、开庭和举证期限、诉讼日程提醒. This is a DeepSeek Harness (dsh) adapter for claude-for-legal-ZH/managed-agent-cookbooks/docket-watcher."
+description: "Use when the user needs a Chinese legal managed workflow for 案件期限监控工作流: 诉讼案件台账、期限监控、案件 docket、开庭和举证期限、诉讼日程提醒. This is a DeepSeek Harness (dsh) adapter for skills-for-legal/managed-agent-cookbooks/docket-watcher."
 ---
 
 # 案件期限监控工作流 DeepSeek Harness Adapter
@@ -17,7 +17,7 @@ This skill ports the original managed-agent cookbook into a DeepSeek Harness (`d
 
 ## Path Resolution
 
-The repository-relative paths above resolve against the `claude-for-legal-ZH` repository root:
+The repository-relative paths above resolve against the `skills-for-legal` repository root:
 
 - If the current workspace contains the repository, resolve them against the repository root directly.
 - Otherwise (user-level install), run `cat ~/.dsh/legal-zh/repo` once to get the absolute repository path recorded by `scripts/install-dsh.sh`, then prefix the relative paths with it.

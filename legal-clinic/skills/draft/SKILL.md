@@ -10,7 +10,7 @@ argument-hint: "[文件类型 — 如 '劳动争议仲裁申请书', '离婚起�
 
 # /draft
 
-1. 加载 `~/.claude/plugins/config/claude-for-legal-zh/legal-clinic/CLAUDE.md` → 实践领域模板、管辖地、本地规则、指导风格。
+1. 加载 `~/.claude/plugins/config/skills-for-legal/legal-clinic/CLAUDE.md` → 实践领域模板、管辖地、本地规则、指导风格。
 2. 使用以下工作流。
 3. 匹配文件类型到模板。从案件笔记中收集事实——缺失则标记，绝不猜测。
 4. 应用管辖地格式。起草时内嵌 `[需补充事实]`、`[待核实]`、`[不确定]` 标记。
@@ -36,13 +36,13 @@ argument-hint: "[文件类型 — 如 '劳动争议仲裁申请书', '离婚起�
 
 ## 加载上下文
 
-`~/.claude/plugins/config/claude-for-legal-zh/legal-clinic/CLAUDE.md` → 实践领域、实践领域模板、管辖地（省份+本地法院+已收录的任何本地规则）、指导风格。
+`~/.claude/plugins/config/skills-for-legal/legal-clinic/CLAUDE.md` → 实践领域、实践领域模板、管辖地（省份+本地法院+已收录的任何本地规则）、指导风格。
 
 案件笔记或接待摘要用于获取事实。
 
 ## 教学检查
 
-读取该实践领域的指导老师指南，路径为 `~/.claude/plugins/config/claude-for-legal-zh/legal-clinic/guides/<实践领域>.md`。检查 `pedagogy_posture` 设置：
+读取该实践领域的指导老师指南，路径为 `~/.claude/plugins/config/skills-for-legal/legal-clinic/guides/<实践领域>.md`。检查 `pedagogy_posture` 设置：
 
 - **`guide`（默认）：** 产出结构和核查清单。要求学生自行起草每节。对其草稿给予反馈（语域、阅读水平、必要元素、遗漏之处）。仅当学生已尝试一次后，才为某节提供填充。
 - **`assist`：** 产出工作成果。标注事项供学生审查。学生通过审查编辑来学习。
@@ -58,7 +58,7 @@ argument-hint: "[文件类型 — 如 '劳动争议仲裁申请书', '离婚起�
 
 ### 第1步：哪种文件？
 
-将请求匹配到诊所的模板集（来自 `~/.claude/plugins/config/claude-for-legal-zh/legal-clinic/CLAUDE.md`）。按实践领域的常见设置：
+将请求匹配到诊所的模板集（来自 `~/.claude/plugins/config/skills-for-legal/legal-clinic/CLAUDE.md`）。按实践领域的常见设置：
 
 | 实践领域 | 文件 |
 |---|---|
@@ -82,7 +82,7 @@ argument-hint: "[文件类型 — 如 '劳动争议仲裁申请书', '离婚起�
 
 ### 第3步：应用管辖地
 
-按 `~/.claude/plugins/config/claude-for-legal-zh/legal-clinic/CLAUDE.md` 管辖地：
+按 `~/.claude/plugins/config/skills-for-legal/legal-clinic/CLAUDE.md` 管辖地：
 
 - **文书标题格式：** 省份和本地法院规则。如果冷启动时已收录本地规则，使用它们。如果没有，使用省级默认并标记：`[待核实文书标题：本地规则未加载——对照[法院]现行规则确认格式]`
 - **送达要求：** 谁被送达、如何送达、按法院规则的送达期限
@@ -104,9 +104,9 @@ argument-hint: "[文件类型 — 如 '劳动争议仲裁申请书', '离婚起�
 
 ### 第6步：指导路由
 
-向法院或机构提交文件是一项具有法律后果的行为。门控是 `~/.claude/plugins/config/claude-for-legal-zh/legal-clinic/CLAUDE.md` 中 `## 指导风格` 描述的指导工作流程，由确认持证指导律师拥有诊所设置的 Part 0 身份检查强化。无论选择何种指导风格，法院提交始终通过指导审查后才能提交。
+向法院或机构提交文件是一项具有法律后果的行为。门控是 `~/.claude/plugins/config/skills-for-legal/legal-clinic/CLAUDE.md` 中 `## 指导风格` 描述的指导工作流程，由确认持证指导律师拥有诊所设置的 Part 0 身份检查强化。无论选择何种指导风格，法院提交始终通过指导审查后才能提交。
 
-按 `~/.claude/plugins/config/claude-for-legal-zh/legal-clinic/CLAUDE.md` 指导风格：
+按 `~/.claude/plugins/config/skills-for-legal/legal-clinic/CLAUDE.md` 指导风格：
 - **正式审查队列：** 草稿进入队列，学生看到"已排队等待[指导老师]"
 - **可配置标记：** 如果该文件类型是标记触发条件（法院提交通常是），输出包含"提交前请与[指导老师]确认"
 - **较轻触：** 标准保障标签，无额外门控——但法院提交仍按诊所现有指导结构在提交前送交指导老师

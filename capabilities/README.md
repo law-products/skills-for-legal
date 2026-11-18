@@ -15,7 +15,7 @@
 
 ```bash
 /plugin marketplace add <path-to-repo>
-/plugin install legal-capabilities@claude-for-legal-zh
+/plugin install legal-capabilities@skills-for-legal
 ```
 
 或将 `skills/` 下的目录复制到项目的 `.claude/skills/`：

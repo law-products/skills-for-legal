@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate DeepSeek Harness (dsh) skill adapters for claude-for-legal-ZH.
+"""Generate DeepSeek Harness (dsh) skill adapters for skills-for-legal.
 
 The upstream repository is a Claude Code plugin marketplace. DeepSeek Harness
 discovers skills from `<project>/.dsh/skills` and `~/.dsh/skills` (it also
@@ -32,7 +32,7 @@ SKILLS_ROOT = ROOT / ".dsh" / "skills"
 
 PATH_RESOLUTION = """## Path Resolution
 
-The repository-relative paths above resolve against the `claude-for-legal-ZH` repository root:
+The repository-relative paths above resolve against the `skills-for-legal` repository root:
 
 - If the current workspace contains the repository, resolve them against the repository root directly.
 - Otherwise (user-level install), run `cat ~/.dsh/legal-zh/repo` once to get the absolute repository path recorded by `scripts/install-dsh.sh`, then prefix the relative paths with it.
@@ -51,7 +51,7 @@ def yaml_string(text: str) -> str:
 
 def adapter_body(domain: str, meta: dict, skills: list[str], description: str) -> str:
     commands = ", ".join(f"`{name}`" for name in skills)
-    desc = f'Use when the user needs Chinese legal work in the {meta["display"]} domain: {meta["triggers"]}. This is a DeepSeek Harness (dsh) adapter for claude-for-legal-ZH/{domain}; it routes natural-language requests to the original domain CLAUDE.md and skills/*/SKILL.md workflows.'
+    desc = f'Use when the user needs Chinese legal work in the {meta["display"]} domain: {meta["triggers"]}. This is a DeepSeek Harness (dsh) adapter for skills-for-legal/{domain}; it routes natural-language requests to the original domain CLAUDE.md and skills/*/SKILL.md workflows.'
     return f"""---
 name: {meta["codex_name"]}
 description: {yaml_string(desc)}
@@ -59,7 +59,7 @@ description: {yaml_string(desc)}
 
 # {meta["display"]} DeepSeek Harness Adapter
 
-This skill lets DeepSeek Harness (`dsh`) use the original `claude-for-legal-ZH/{domain}` content without requiring Claude Code slash commands.
+This skill lets DeepSeek Harness (`dsh`) use the original `skills-for-legal/{domain}` content without requiring Claude Code slash commands.
 
 ## Source Files
 
@@ -106,7 +106,7 @@ If the active dsh profile mounts the `chineselaw` or `yuandian` MCP servers (see
 
 def cookbook_body(cookbook: str, meta: dict) -> str:
     root = f"managed-agent-cookbooks/{cookbook}"
-    desc = f'Use when the user needs a Chinese legal managed workflow for {meta["display"]}: {meta["triggers"]}. This is a DeepSeek Harness (dsh) adapter for claude-for-legal-ZH/managed-agent-cookbooks/{cookbook}.'
+    desc = f'Use when the user needs a Chinese legal managed workflow for {meta["display"]}: {meta["triggers"]}. This is a DeepSeek Harness (dsh) adapter for skills-for-legal/managed-agent-cookbooks/{cookbook}.'
     return f"""---
 name: {meta["codex_name"]}
 description: {yaml_string(desc)}

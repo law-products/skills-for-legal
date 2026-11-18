@@ -18,7 +18,7 @@ user-invocable: false
 仅限通过本中心安装的社区技能。识别规则：
 
 - 技能名称必须出现在
-  `~/.claude/plugins/config/claude-for-legal-zh/legal-builder-hub/install-log.yaml`
+  `~/.claude/plugins/config/skills-for-legal/legal-builder-hub/install-log.yaml`
   中，且最新操作记录为 `install` 或 `enable`（非 `uninstall`）。
 - 技能文件必须解析到 claude-for-legal 附带的预装插件目录之外的路径。
 
@@ -103,5 +103,5 @@ claude-for-legal 附带的 12 个核心插件对此命令不可触碰。规范�
 ## 本技能不做什么
 
 - 卸载第一方插件技能。使用 `/plugin` 进行插件管理。
-- 默认删除用户配置。`~/.claude/plugins/config/claude-for-legal-zh/<plugin>/` 中的配置默认保留，除非用户明确要求删除。
+- 默认删除用户配置。`~/.claude/plugins/config/skills-for-legal/<plugin>/` 中的配置默认保留，除非用户明确要求删除。
 - 每次调用操作超过一个技能。一个名称，一个操作。
